@@ -39,8 +39,8 @@
 
     <title>smart-ticketing</title>
   </head>
-  <body class="container mx-auto">
-    <header class="px-2 lg:px-0">
+  <body>
+    <header class="container mx-auto px-2 lg:px-0">
       <nav>
         <div class="navbar bg-base-100 px-0">
           <div class="navbar-start">
@@ -105,9 +105,9 @@
     </header>
 
     <!-- main section start -->
-    <main class="container lg:px-0 px-2">
+    <main class="">
       <!-- banner section start -->
-      <section class="banner bg-white mt-8">
+      <section class="container mx-auto banner bg-white mt-8 lg:px-0 px-2">
         <div
           class="min-h-[570px] bg-cover lg:rounded-[32px] bg-center"
           style="background-image: url(images/banner.png)"
@@ -136,18 +136,20 @@
                   streamlined .
                 </p>
               </div>
-              <button
-                class="btn bg-primary text-base-black border-none text-[20px] font-bold hover:bg-[#59a04ecb]"
-              >
-                Buy Tickets
-              </button>
+              <a href="#select-ticket">
+                <button
+                  class="btn bg-primary text-base-black border-none text-[20px] font-bold hover:bg-[#59a04ecb]"
+                >
+                  Buy Tickets
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </section>
       <!-- banner section ended -->
 
-      <section class="lg:-mt-[70px] invisible lg:visible">
+      <section class="container mx-auto lg:-mt-[70px] invisible lg:visible">
         <div class="flex flex-row gap-6 justify-center items-center">
           <div
             class="bg-base-white lg:w-[308px] lg:h-[138px] rounded-3xl border-b-[3px] border-primary"
@@ -206,7 +208,7 @@
       </section>
 
       <!-- best offer sections -->
-      <section class="best-offer mx-auto mt-[120px]">
+      <section class="container best-offer mx-auto mt-[120px] lg:px-0 px-2">
         <p class="text-center font-bold text-4xl text-base-black">
           Best offers for you
         </p>
@@ -332,6 +334,130 @@
       </section>
 
       <!-- best offer sections end -->
+
+      <!-- ticket selection section start -->
+      <section
+        class="select-ticket lg:mt-[120px] bg-[#F7F8F8] mt-[70px] border-t-[1px] rounded-t-[88px] border-[#1DD100]"
+        id="select-ticket"
+      >
+        <div class="container mx-auto rounded-t-[88px] mt-[120px]">
+          <div class="h-52">
+            <div class="">
+              <h2 class="text-[40px] font-bold text-center text-[#030712]">
+                J.R Paribahan
+              </h2>
+              <p
+                class="text-[#03071299] inter text-lg font-normal text-center mt-[24px]"
+              >
+                Yes, you can run unit tests and view the results directly within
+                the app. The integrated <br />
+                testing features allow for a streamlined .
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex lg:flex-row flex-col justify-between items-center bg-[#FFFFFF] rounded-3xl mt-[45px] px-8 lg:h-[375px]"
+          >
+            <div class="w-[80%]">
+              <div class="flex flex-row justify-between items-center w-[full]">
+                <div class="flex flex-row justify-between items-center gap-4">
+                  <div>
+                    <img
+                      src="images/bus-logo.png"
+                      alt="bus-logo"
+                      class="w-full"
+                    />
+                  </div>
+                  <div>
+                    <h3
+                      class="text-center text-[#030712] text-[32px] font-bold"
+                    >
+                      Greenline Paribahan
+                    </h3>
+                    <p class="text-center font-normal text-lg text-[#03071299]">
+                      Coach-009-WEB ! AC_Business
+                    </p>
+                  </div>
+                </div>
+                <div class="bg-[#1DD10026] rounded-xl p-4">
+                  <div class="flex flex-row justify-between gap-1 items-center">
+                    <img src="images/seat-green.png" alt="seat-green" />
+                    <p class="text-primary text-lg font-medium">
+                      <span>40 </span>Seats left
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#F7F8F8] rounded-3xl p-8 mt-6">
+                <div class="flex flex-row justify-between items-center">
+                  <p class="text-[#03071299] text-lg font-semibold">Route</p>
+                  <p class="text-[#03071299] text-base-black font-semibold">
+                    Dhaka-Sylhet
+                  </p>
+                </div>
+                <div
+                  class="border-dotted border-[#03071233] border-[1px] my-6"
+                ></div>
+                <div class="flex flex-row justify-between items-center">
+                  <p class="text-[#03071299] text-lg font-semibold">
+                    Departure Time
+                  </p>
+                  <p class="text-[#03071299] text-base-black font-semibold">
+                    9:00 PM
+                  </p>
+                </div>
+
+                <div
+                  class="border-dotted border-[#03071233] border-[1px] my-6"
+                ></div>
+
+                <div class="flex flex-row justify-between items-center gap-6">
+                  <p
+                    class="inter text-[16px] font-medium text-[#030712CC] p-4 bg-[#0307120D] rounded-xl"
+                  >
+                    Boarding Point - Laxmipur
+                  </p>
+                  <p
+                    class="inter text-[16px] font-medium text-[#030712CC] p-4 bg-[#0307120D] rounded-xl"
+                  >
+                    Dropping Point - Bogura
+                  </p>
+                  <p
+                    class="inter text-[16px] font-medium text-[#030712CC] p-4 bg-[#0307120D] rounded-xl"
+                  >
+                    Est. Time - 11 Hour
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-row justify-between items-center">
+              <!-- info divider -->
+              <div>
+                <img
+                  src="images/info-devider.png"
+                  alt="info-divider"
+                  class="w-[90%]"
+                />
+              </div>
+              <div>
+                <img
+                  src="images/fare.png"
+                  alt="fare"
+                  class="text-center mx-auto"
+                />
+                <p class="text-center text-[32px] font-bold">
+                  <span>550</span> Taka
+                </p>
+                <p class="text-[#03071299] text-2xl font-semibold text-center">
+                  Per Seat
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
