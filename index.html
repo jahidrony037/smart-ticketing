@@ -390,7 +390,7 @@
                   <div class="flex flex-row justify-between gap-1 items-center">
                     <img src="images/seat-green.png" alt="seat-green" />
                     <p class="text-primary text-lg font-medium">
-                      <span>40 </span>Seats left
+                      <span id="available-seat">40 </span>Seats left
                     </p>
                   </div>
                 </div>
@@ -453,7 +453,7 @@
                   class="text-center mx-auto"
                 />
                 <p class="text-center text-[32px] font-bold">
-                  <span>550</span> Taka
+                  <span id="ticket-price">550</span> Taka
                 </p>
                 <p class="text-[#03071299] text-2xl font-semibold text-center">
                   Per Seat
@@ -934,8 +934,10 @@
                         class="lg:text-[16px] text-sm inter font-medium text-base-black"
                       >
                         Seat
-                        <span class="bg-primary rounded-full p-2 text-white"
-                          >2</span
+                        <span
+                          class="bg-primary rounded-full p-2 text-white"
+                          id="booking-number"
+                          >0</span
                         >
                       </p>
                     </div>
@@ -961,18 +963,8 @@
                     class="border-dotted my-4 border-b-[1px] border-[#03071233]"
                   ></div>
                   <!-- selected seat show section -->
-                  <div class="mt-[16px]">
-                    <div class="flex flex-row justify-between items-center">
-                      <p class="inter text-[16px] text-[#03071299] font-normal">
-                        C2
-                      </p>
-                      <p class="inter text-[16px] text-[#03071299] font-normal">
-                        Economy
-                      </p>
-                      <p class="inter text-[16px] text-[#03071299] font-normal">
-                        550
-                      </p>
-                    </div>
+                  <div class="mt-[16px]" id="seat-details-container">
+                    <!-- <div ></div> -->
                   </div>
 
                   <div
@@ -990,7 +982,8 @@
                       BDT
                       <span
                         class="lg:text-[16px] text-sm inter font-medium text-base-black"
-                        >1100</span
+                        id="total-price"
+                        >0</span
                       >
                     </p>
                   </div>
@@ -998,20 +991,25 @@
                   <!-- coupon box -->
                   <div
                     class="coupon-box mt-4 bg-[#FFFFFF] flex flex-row justify-around pr-2 py-2 pl-3 rounded-xl"
+                    id="coupon-box"
                   >
                     <input
                       type="text"
                       name="coupon"
-                      id=""
+                      id="coupon-code"
                       placeholder="Have any coupon?"
                       class="bg-[#FFFFFF] outline-none h-[50px] py-1 w-full"
                     />
                     <button
                       class="btn bg-primary border-none text-white inter text-[16px] font-semibold"
+                      disabled
+                      id="apply"
                     >
                       Apply
                     </button>
                   </div>
+
+                  <div id="discount"></div>
 
                   <!-- grand total -->
                   <div class="flex flex-row justify-between items-center mt-6">
@@ -1026,7 +1024,8 @@
                       BDT
                       <span
                         class="lg:text-[16px] text-sm inter font-medium text-base-black"
-                        >1100</span
+                        id="grand-total"
+                        >0</span
                       >
                     </p>
                   </div>
@@ -1059,7 +1058,7 @@
                         >
                       </div>
                       <input
-                        type="text"
+                        type="number"
                         placeholder="Enter Your Name"
                         class="input input-bordered w-full rounded-xl border-[#0307121A] focus:outline-none pl-6"
                         required
@@ -1088,6 +1087,7 @@
                       type="submit"
                       value="Next"
                       class="w-full btn bg-primary text-white"
+                      disabled
                     />
                   </div>
                 </form>
@@ -1154,5 +1154,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="script/app.js"></script>
   </body>
 </html>
