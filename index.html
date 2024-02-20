@@ -1031,7 +1031,7 @@
                   </div>
                 </div>
 
-                <form action="">
+                <form action="#" name="form1">
                   <!-- passenger name -->
                   <div class="mt-6">
                     <label class="form-control w-full">
@@ -1062,6 +1062,8 @@
                         placeholder="Enter Your Name"
                         class="input input-bordered w-full rounded-xl border-[#0307121A] focus:outline-none pl-6"
                         required
+                        name="phone-number"
+                        id="phone-number"
                       />
                     </label>
                   </div>
@@ -1075,19 +1077,24 @@
                         >
                       </div>
                       <input
-                        type="text"
+                        type="email"
                         placeholder="Enter Your Name"
                         class="input input-bordered w-full rounded-xl border-[#0307121A] focus:outline-none pl-6"
                       />
                     </label>
                   </div>
 
-                  <div class="mt-6 rounded-2xl">
+                  <div
+                    class="mt-6 rounded-2xl"
+                    id="next-btn"
+                    onclick="my_modal.showModal()"
+                  >
                     <input
                       type="submit"
                       value="Next"
                       class="w-full btn bg-primary text-white"
                       disabled
+                      id="submit"
                     />
                   </div>
                 </form>
@@ -1154,6 +1161,42 @@
         </div>
       </div>
     </footer>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal.showModal()">open modal</button> -->
+    <dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box rounded-2xl bg-[#FFFFFF]">
+        <div class="text-center">
+          <img src="images/success.png" alt="success" class="mx-auto" />
+          <p
+            class="uppercase text-[#27AE60] inter text-2xl font-bold text-center"
+          >
+            success
+          </p>
+          <div>
+            <p class="text-center text-[#4A4A4A] text-[20px] font-medium">
+              Thank you for Booking Our Bus Seats. We are working hard to find
+              the best service and deals for you. <br />
+              <span
+                class="text-center mt-1 text-[#4A4A4A] text-[20px] font-light"
+                >Shortly you will find a confirmation in your email.</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="modal-action justify-center">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button
+              class="btn bg-[#27AE60] rounded-[32px] w-[300px] text-white"
+              id="continue"
+            >
+              continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </dialog>
 
     <script src="script/app.js"></script>
   </body>

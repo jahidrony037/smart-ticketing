@@ -139,6 +139,26 @@ document.getElementById('apply').addEventListener('click', function(event){
 })
 
 
+document.getElementById('phone-number').addEventListener('keyup', function(event){
+    const inputText = event.target.value;
+    const phoneNo = /^\d{11}$/;
+    if(inputText.match(phoneNo) && arr.length>=1){
+        document.getElementById('submit').removeAttribute('disabled');
+    }
+    else{
+        document.getElementById('submit').setAttribute('disabled',true);
+    }
+})
+
+document.getElementById('next-btn').addEventListener('click', function(event){
+    event.preventDefault();
+})
+
+document.getElementById('continue').addEventListener('click', function(){
+    window.location.reload();
+})
+
+
 
 
 function getValue(idName){
